@@ -33,6 +33,15 @@ FROM `departments`;
 SELECT COUNT(`id`)
 FROM `teachers`
 WHERE `phone` IS NULL;
+-- 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
+-- degree_id, inserire un valore casuale)
+INSERT INTO `students` SET degree_id=69,name="matteo",surname="invidia", date_of_birth="1998-09-16", fiscal_code="NVDMTT98P16C978I",enrolment_date="2020-06-18",registration_number="646464",email="matteoinvidia@gmail.com";
+-- 10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+UPDATE `teachers` SET  office_number="126"
+WHERE Id="58";
+-- 11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+DELETE FROM `students` WHERE Id="5001";
+
 
 -- 1. Contare quanti iscritti ci sono stati ogni anno
 SELECT COUNT(id), YEAR(`enrolment_date`)
