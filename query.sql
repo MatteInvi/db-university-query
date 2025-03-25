@@ -79,7 +79,3 @@ GROUP BY (`department_id`);
 
 
 
-
-
-ALTER TABLE `students`
-ADD `actual_data` DATE;
